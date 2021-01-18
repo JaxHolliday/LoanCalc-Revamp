@@ -110,12 +110,6 @@ window.onload = function defaultGraph() {
     document.getElementById("chart").innerHTML = `<br><br><br><br><br><br><br><br><br><br><br><br><br>`;
 }
 
-
-/////////////////////////////////////////////////////////////////////
-//                         SHYANN EDITS                            //
-/////////////////////////////////////////////////////////////////////
-
-
 // Button Event
 document.getElementById('calc').addEventListener('click', function () {
 
