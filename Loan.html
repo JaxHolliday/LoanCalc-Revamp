@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/css/style1.css">
+    <!-- End layout styles -->
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_horizontal-navbar.html -->
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0 bg-gradient-dark">
+                <div class="container">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" href="/Loan.html"><img src="/img/logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="nav-profile-img">
+                                        <img src="/img/leeroy.jpg" alt="image">
+                                        <span class="availability-status online"></span>
+                                    </div>
+                                    <div class="nav-profile-text">
+                                        <p class="text-black">Leeroy Jenkins</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item d-none d-lg-flex full-screen-link">
+                                <a class="nav-link">
+                                    <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottom-navbar bg-gradient-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <ul class="nav page-navigation">                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/index.html" target="_blank">
+                                        <i class="mdi mdi-account-heart menu-icon"></i>
+                                        <span class="menu-title">Landing Page</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Loan.html">
+                                        <i class="mdi mdi-home menu-icon"></i>
+                                        <span class="menu-title">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="//github.com/helloshyann/Group8LoanApp" target="_blank">
+                                        <i class="mdi mdi-github-face menu-icon"></i>
+                                        <span class="menu-title">GitHub</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="page-header">
+                        <h3 class="page-title">
+                            <span class="page-title-icon bg-gradient-primary text-white mr-2">
+                                <i class="mdi mdi-home"></i>
+                            </span> Welcome to your dashboard, Leeroy Jenkins
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-gradient-danger card-img-holder text-white">
+                                <div class="card-body">
+                                    <h5 class="font-weight-normal mb-3">
+                                        Term Length: <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                                    </h5>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="termMon"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-gradient-info card-img-holder text-white">
+                                <div class="card-body">
+                                    <h5 class="font-weight-normal mb-3">
+                                        Total Loan Amount: <i class="mdi mdi-calculator-variant mdi-24px float-right"></i>
+                                    </h5>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="totBal"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-gradient-success card-img-holder text-white">
+                                <div class="card-body">
+                                    <h5 class="font-weight-normal mb-3">
+                                        Monthly Payment: <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                                    </h5>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="monPay"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 stretch-card grid-margin">
+                            <div class="card bg-gradient-dark card-img-holder text-white">
+                                <div class="card-body">
+                                    <h5 class="font-weight-normal mb-3">
+                                        Interest Rate: <i class="mdi mdi-percent mdi-24px float-right"></i>
+                                    </h5>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="intRate"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="m-0 font-weight-bold text-primary name3">LOAN CALCULATOR</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form class="card-body row1Card">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h6 class="font-weight-bold name1">Enter Loan Amount ($): </h6>
+                                                <input type="text" placeholder="Total Balance" class="textfield name2 form-control-sm" id="balance" onkeypress="return isNumber(event)" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h6 class="font-weight-bold name1">Enter Term (Months): </h6>
+                                                <input type="text" placeholder="Term" class="textfield name2 form-control-sm" id="term" onkeypress="return isNumber(event)" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h6 class="font-weight-bold name1">Enter Interest Rate (%): </h6>
+                                                <input type="text" placeholder="Interest Rate" class="textfield name2 form-control-sm" id="rate" onkeypress="return isNumber(event)" />
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <button type="button" class="btn btn-primary name3" id="calc">CALCULATE</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="m-0 font-weight-bold text-primary name3">PAYMENT PROJECTION</h4>
+                                </div>
+                                <div class="card-body" id="chart">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="m-0 font-weight-bold text-primary name3">MONTHLY PAYMENT DETAILS</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" style="height: 500px; overflow: scroll;">
+                                        <table class="table table-striped" id="result">
+                                            <!-- Output will go Here! -->
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    
+
+    <script src="//cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- plugins:js -->
+    <script src="/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="/js/Chart.min.js"></script>
+    <script src="/js/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="/js/off-canvas.js"></script>
+    <script src="/js/hoverable-collapse.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/MortCalc.js"></script>
+    <!-- End custom js for this page -->
+
+
+
+</body>
+</html>
